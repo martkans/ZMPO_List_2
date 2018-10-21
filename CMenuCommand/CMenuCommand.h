@@ -9,9 +9,15 @@
 #include "../CMenuItem/CMenuItem.h"
 #include "../CCommand/CCommand.h"
 
-class CMenuCommand : CMenuItem{
+class CMenuCommand : private CMenuItem{
+    public:
+        CMenuCommand(string name, string command, CCommand* command_object);
+        CMenuCommand(string name, string command);
+
+        ~CMenuCommand();
     private:
-        CCommand * command_object;
+        CCommand* command_object;
+        virtual void run();
 
 };
 

@@ -10,6 +10,8 @@
 using namespace std;
 
 class CMenuItem {
+    public:
+        friend class CMenu;
     protected:
         string name;
         string command;
