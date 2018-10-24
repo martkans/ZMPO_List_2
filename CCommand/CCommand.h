@@ -21,6 +21,7 @@ using namespace std;
 
 class CCommand {
     public:
+        virtual ~CCommand();
         virtual void runCommand();
 };
 #endif //LISTA2_CCOMMAND_H

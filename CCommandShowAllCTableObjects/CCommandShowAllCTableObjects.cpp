@@ -4,9 +4,18 @@
 
 #include "CCommandShowAllCTableObjects.h"
 
+CCommandShowAllCTableObjects::CCommandShowAllCTableObjects(CTableHandler *table_handler) {
+    this->table_handler = table_handler;
+}
+
+CCommandShowAllCTableObjects::~CCommandShowAllCTableObjects() {
+
+    cout << "usuwam CCommandShowAllCTableObjects\n";
+}
+
 void CCommandShowAllCTableObjects::runCommand() {
-    if (CTableHandler::getVectorLastIndex() != EMPTY_VECTOR) {
-        cout << "\n" << CTableHandler::getShortInfoAboutAllObjects() << "\n";
+    if (table_handler->getVectorLastIndex() != EMPTY_VECTOR) {
+        cout << "\n" << table_handler->getShortInfoAboutAllObjects() << "\n";
     } else {
         alert(NO_OBJECTS_ALERT_MESSAGE);
     }

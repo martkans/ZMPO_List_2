@@ -7,8 +7,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandCreateObjects : CCommand{
-    virtual void runCommand();
+class CCommandCreateObjects : public CCommand{
+    public:
+        CCommandCreateObjects(CTableHandler* table_handler);
+        ~CCommandCreateObjects();
+
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 };
 
 

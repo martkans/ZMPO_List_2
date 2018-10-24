@@ -4,15 +4,24 @@
 
 #include "CCommandChangeTableSize.h"
 
+
+CCommandChangeTableSize::CCommandChangeTableSize(CTableHandler *table_handler) {
+    this->table_handler = table_handler;
+}
+
+CCommandChangeTableSize::~CCommandChangeTableSize() {
+    cout << "usuwam CCommandChangeTableSize\n";
+}
+
 void CCommandChangeTableSize::runCommand() {
     bool* error = new bool();
     int position_of_object;
     int table_length;
 
-    if(CTableHandler::getVectorLastIndex() != EMPTY_VECTOR){
-        cout << "\nPodaj nr obiektu, którego chcesz zmienić rozmiar (0 - " << CTableHandler::getVectorLastIndex()
+    if(table_handler->getVectorLastIndex() != EMPTY_VECTOR){
+        cout << "\nPodaj nr obiektu, którego chcesz zmienić rozmiar (0 - " << table_handler->getVectorLastIndex()
              << ")\n";
-        position_of_object = provideInt(0, CTableHandler::getVectorLastIndex(), error);
+        position_of_object = provideInt(0, table_handler->getVectorLastIndex(), error);
 
         if (*error){
             alert(BAD_VALUE_ALERT_MESSAGE);
@@ -25,7 +34,7 @@ void CCommandChangeTableSize::runCommand() {
             if (*error){
                 alert(BAD_VALUE_ALERT_MESSAGE);
             } else {
-                CTableHandler::changeSizeOfObject(position_of_object, table_length);
+                table_handler->changeSizeOfObject(position_of_object, table_length);
             }
         }
     } else {

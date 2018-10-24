@@ -4,6 +4,14 @@
 
 #include "CCommandCreateObjects.h"
 
+CCommandCreateObjects::CCommandCreateObjects(CTableHandler *table_handler) {
+    this->table_handler = table_handler;
+}
+
+CCommandCreateObjects::~CCommandCreateObjects() {
+    cout << "usuwam CCommandCreateObjects\n";
+}
+
 
 void CCommandCreateObjects::runCommand() {
     bool* error = new bool();
@@ -26,7 +34,7 @@ void CCommandCreateObjects::runCommand() {
                 --i;
             } else {
                 if (answer){
-                    CTableHandler::createDefaultObject();
+                    table_handler->createDefaultObject();
                 } else {
                     string name;
                     int table_length;
@@ -41,7 +49,7 @@ void CCommandCreateObjects::runCommand() {
                         alert(BAD_VALUE_ALERT_MESSAGE);
                         --i;
                     } else {
-                        CTableHandler::createPersonalizedObject(table_length, name);
+                        table_handler->createPersonalizedObject(table_length, name);
                     }
                 }
             }

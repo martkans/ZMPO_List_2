@@ -4,10 +4,9 @@
 
 #include "CTableHandler.h"
 
-vector <CTable*> CTableHandler::CTable_objects;
-
 CTableHandler::~CTableHandler() {
     deleteAllObjects();
+    cout << "\n";
 }
 
 int CTableHandler::getVectorLastIndex() {

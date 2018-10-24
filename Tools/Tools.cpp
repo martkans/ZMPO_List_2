@@ -64,22 +64,6 @@ int provideInt(int lower_limit, int upper_limit, bool* error) {
     return number;
 }
 
-int chooseBetweenTwoNumbers(int first, int second, bool* error) {
-    string input_data;
-    bool* conversion_error = new bool();
-    int number;
-
-    getline(cin, input_data);
-    number = convertStringToInt(input_data, conversion_error);
-
-    if (*conversion_error || (number != first && number != second)){
-        *error = true;
-    } else {
-        *error = false;
-    }
-    return number;
-}
-
 bool provideYesOrNo(bool *error) {
     string confirm;
 

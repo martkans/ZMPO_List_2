@@ -5,6 +5,8 @@
 #ifndef LISTA2_CMENU_H
 #define LISTA2_CMENU_H
 
+#define BACK_STRING "back"
+
 #include <iostream>
 #include <vector>
 
@@ -13,19 +15,23 @@
 
 using namespace std;
 
-class CMenu : CMenuItem{
-    private:
-        vector <CMenuItem*> menu_items;
-        virtual void run();
-        void showMenu();
-
+class CMenu : public CMenuItem{
     public:
-        CMenu();
+        CMenu(string name, string command);
         ~CMenu();
 
-        bool addCMenuItem(CMenuItem*);
-        bool deleteCMenuItem(CMenuItem*);
+        void run();
 
+        bool addCMenuItem(CMenuItem* item);
+        bool deleteCMenuItem(string command_of_object_to_delete);
+
+    private:
+        bool* error;
+        vector <CMenuItem*> menu_items;
+
+        void showMenu();
+        bool checkIfUnique(string new_name, string new_command);
+        unsigned long getPositionOfCMenuItem(string command, bool* error);
 };
 
 

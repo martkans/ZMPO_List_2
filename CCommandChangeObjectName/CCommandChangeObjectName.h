@@ -8,9 +8,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandChangeObjectName : CCommand{
-    virtual void runCommand();
+class CCommandChangeObjectName : public CCommand{
+    public:
+        CCommandChangeObjectName(CTableHandler* table_handler);
+        ~CCommandChangeObjectName();
 
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 };
 
 

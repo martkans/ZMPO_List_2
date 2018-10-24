@@ -5,6 +5,8 @@
 #ifndef LISTA2_CMENUITEM_H
 #define LISTA2_CMENUITEM_H
 
+#define BAD_VALUE_ALERT_MESSAGE                 "Podano błędną wartość.\n"
+
 #include <string>
 
 using namespace std;
@@ -12,6 +14,8 @@ using namespace std;
 class CMenuItem {
     public:
         friend class CMenu;
+        virtual ~CMenuItem(){};
+
     protected:
         string name;
         string command;

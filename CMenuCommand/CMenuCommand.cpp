@@ -18,6 +18,7 @@ CMenuCommand::CMenuCommand(string name, string command) {
 
 CMenuCommand::~CMenuCommand() {
     delete command_object;
+    cout << "usuwam CMenuCommand: " + command + "\n";
 }
 
 void CMenuCommand::run() {

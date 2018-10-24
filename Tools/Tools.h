@@ -24,7 +24,6 @@ bool isInRange(int number, int lower_limit, int upper_limit);
 
 
 int provideInt(int lower_limit, int upper_limit, bool* error);
-int chooseBetweenTwoNumbers(int first, int second, bool* error);
 
 bool provideYesOrNo(bool* error);
 

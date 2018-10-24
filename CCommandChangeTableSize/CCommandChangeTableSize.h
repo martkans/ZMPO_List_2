@@ -7,8 +7,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandChangeTableSize : CCommand{
-    virtual void runCommand();
+class CCommandChangeTableSize : public CCommand{
+    public:
+        CCommandChangeTableSize(CTableHandler* table_handler);
+        ~CCommandChangeTableSize();
+
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 };
 
 

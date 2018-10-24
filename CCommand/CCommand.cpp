@@ -4,6 +4,11 @@
 
 #include "CCommand.h"
 
+CCommand::~CCommand() {
+    cout << "usuwam CCommand\n";
+}
+
 void CCommand::runCommand() {
     cout << "Komenda domyślna\n";
 }
+

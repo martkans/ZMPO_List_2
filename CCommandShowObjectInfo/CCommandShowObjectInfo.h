@@ -8,8 +8,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandShowObjectInfo : CCommand{
-    virtual void runCommand();
+class CCommandShowObjectInfo : public CCommand{
+    public:
+        CCommandShowObjectInfo(CTableHandler* table_handler);
+        ~CCommandShowObjectInfo();
+
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 };
 
 

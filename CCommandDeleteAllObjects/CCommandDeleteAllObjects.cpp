@@ -4,11 +4,19 @@
 
 #include "CCommandDeleteAllObjects.h"
 
+CCommandDeleteAllObjects::CCommandDeleteAllObjects(CTableHandler *table_handler) {
+    this->table_handler = table_handler;
+}
+
+CCommandDeleteAllObjects::~CCommandDeleteAllObjects() {
+    cout << "usuwam CCommandDeleteAllObjects\n";
+}
+
 void CCommandDeleteAllObjects::runCommand() {
     bool answer;
     bool* error = new bool();
 
-    if (CTableHandler::getVectorLastIndex() != EMPTY_VECTOR){
+    if (table_handler->getVectorLastIndex() != EMPTY_VECTOR){
         cout << "\nCzy na pewno chcesz usunąć wszystkie obiekty? (t/n)\n";
         answer = provideYesOrNo(error);
 
@@ -16,7 +24,7 @@ void CCommandDeleteAllObjects::runCommand() {
             alert(CONFIRMATION_ERROR_ALERT_MESSAGE);
         } else{
             if (answer) {
-                CTableHandler::deleteAllObjects();
+                table_handler->deleteAllObjects();
             }
         }
     } else {

@@ -8,8 +8,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandCloneObject : CCommand {
-    virtual void runCommand();
+class CCommandCloneObject : public CCommand {
+    public:
+        CCommandCloneObject(CTableHandler* table_handler);
+        ~CCommandCloneObject();
+
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 };
 
 

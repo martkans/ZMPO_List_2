@@ -8,8 +8,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandDeleteAllObjects : CCommand{
-    virtual void runCommand();
+class CCommandDeleteAllObjects : public CCommand{
+    public:
+        CCommandDeleteAllObjects(CTableHandler* table_handler);
+        ~CCommandDeleteAllObjects();
+
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 
 };
 

@@ -8,8 +8,15 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandSetTableCellValue : CCommand{
-    virtual void runCommand();
+class CCommandSetTableCellValue : public CCommand{
+    public:
+        CCommandSetTableCellValue(CTableHandler* table_handler);
+        ~CCommandSetTableCellValue();
+
+        void runCommand();
+
+    private:
+        CTableHandler* table_handler;
 };
 
 
