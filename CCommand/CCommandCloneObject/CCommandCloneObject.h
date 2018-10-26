@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDCLONEOBJECT_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandCloneObject : public CCommand {
     public:

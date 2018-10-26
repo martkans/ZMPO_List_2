@@ -14,7 +14,8 @@ CMenu::~CMenu() {
     delete error;
 
     while (!menu_items.empty()){
-        deleteCMenuItem(menu_items.at(0)->command);
+        delete menu_items.at(0);
+        menu_items.erase(menu_items.begin());
     }
 
     cout << "usuwam CMenu: " + name + "\n";

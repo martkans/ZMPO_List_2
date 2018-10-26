@@ -5,7 +5,7 @@
 #ifndef LISTA2_CCOMMANDCHANGETABLESIZE_H
 #define LISTA2_CCOMMANDCHANGETABLESIZE_H
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandChangeTableSize : public CCommand{
     public:

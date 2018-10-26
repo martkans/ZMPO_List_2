@@ -5,7 +5,7 @@
 #ifndef LISTA2_CCOMMANDCREATESPECIFICOBJECTS_H
 #define LISTA2_CCOMMANDCREATESPECIFICOBJECTS_H
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandCreateSpecificObjects : public CCommand{
     public:

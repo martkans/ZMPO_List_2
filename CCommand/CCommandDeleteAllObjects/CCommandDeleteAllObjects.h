@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDDELETEALLOBJECTS_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandDeleteAllObjects : public CCommand{
     public:

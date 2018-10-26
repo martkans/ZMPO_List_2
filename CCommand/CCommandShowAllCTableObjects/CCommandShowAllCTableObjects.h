@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDSHOWALLCTABLEOBJECTS_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandShowAllCTableObjects : public CCommand{
     public:

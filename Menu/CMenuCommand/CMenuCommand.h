@@ -7,7 +7,7 @@
 
 
 #include "../CMenuItem/CMenuItem.h"
-#include "../CCommand/CCommand.h"
+#include "../../CCommand/CCommand.h"
 
 class CMenuCommand : public CMenuItem{
     public:

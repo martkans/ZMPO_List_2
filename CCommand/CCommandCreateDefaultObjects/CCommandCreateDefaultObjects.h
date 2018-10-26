@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDCREATEDEFAULTOBJECTS_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandCreateDefaultObjects : public CCommand{
     public:

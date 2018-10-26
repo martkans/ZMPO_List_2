@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDSHOWOBJECTINFO_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandShowObjectInfo : public CCommand{
     public:

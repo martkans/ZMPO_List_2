@@ -24,6 +24,7 @@ void start() {
     ctable_create_menu->addCMenuItem(create_default_objects_mc);
     ctable_create_menu->addCMenuItem(create_specific_objects_mc);
     ctable_create_menu->addCMenuItem(clone_table_mc);
+    ctable_create_menu->addCMenuItem(new CMenuCommand("Klonuj obiekt CTable", "cloe", new CCommandCloneObject(table_handler)));
 
     CMenu* ctable_menu = new CMenu("CTable menu", "ctable");
     ctable_menu->addCMenuItem(ctable_create_menu);

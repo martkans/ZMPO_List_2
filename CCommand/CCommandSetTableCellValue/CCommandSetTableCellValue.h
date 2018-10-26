@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDSETTABLECELLVALUE_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandSetTableCellValue : public CCommand{
     public:

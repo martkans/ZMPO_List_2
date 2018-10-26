@@ -12,7 +12,7 @@
 #define EMPTY_VECTOR    -1
 
 #include "../Tools/Tools.h"
-#include "../CTableHandler/CTableHandler.h"
+#include "../Table/CTableHandler/CTableHandler.h"
 
 #include <iostream>
 #include <climits>

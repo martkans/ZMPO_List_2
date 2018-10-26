@@ -9,7 +9,6 @@ CCommandShowAllCTableObjects::CCommandShowAllCTableObjects(CTableHandler *table_
 }
 
 CCommandShowAllCTableObjects::~CCommandShowAllCTableObjects() {
-
     cout << "usuwam CCommandShowAllCTableObjects\n";
 }
 

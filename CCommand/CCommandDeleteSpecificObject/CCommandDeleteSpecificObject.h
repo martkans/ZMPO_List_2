@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDDELETESPECIFICOBJECT_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandDeleteSpecificObject : public CCommand{
     public:

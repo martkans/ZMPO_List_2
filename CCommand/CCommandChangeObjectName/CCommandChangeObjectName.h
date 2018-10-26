@@ -6,7 +6,7 @@
 #define LISTA2_CCOMMANDCHANGEOBJECTNAME_H
 
 
-#include "../CCommand/CCommand.h"
+#include "../CCommand.h"
 
 class CCommandChangeObjectName : public CCommand{
     public:
