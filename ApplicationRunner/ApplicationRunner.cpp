@@ -37,7 +37,7 @@ void start() {
     ctable_menu->addCMenuItem(test_mc);
 
 
-    CMenuCommand* default_mc = new CMenuCommand("Domyślne polecenie", "defcom", new CCommand);
+    CMenuCommand* default_mc = new CMenuCommand("Domyślne polecenie", "defcom", new CCommand());
     CMenuCommand* without_command_mc = new CMenuCommand("Menu command bez polecenia", "without");
 
     CMenu* main_menu = new CMenu("Menu główne", "main");
