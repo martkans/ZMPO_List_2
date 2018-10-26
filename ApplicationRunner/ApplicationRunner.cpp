@@ -10,7 +10,8 @@ void start() {
     CMenuCommand* change_object_name_mc = new CMenuCommand("Zmień nazwę obiektu CTable", "change object name", new CCommandChangeObjectName(table_handler));
     CMenuCommand* change_table_size_mc = new CMenuCommand("Zmień rozmiar tablicy obiektu CTable", "change size", new CCommandChangeTableSize(table_handler));
     CMenuCommand* clone_table_mc = new CMenuCommand("Klonuj obiekt CTable", "clone", new CCommandCloneObject(table_handler));
-    CMenuCommand* create_object_mc = new CMenuCommand("Utwórz obiekty CTable", "create", new CCommandCreateObjects(table_handler));
+    CMenuCommand* create_specific_objects_mc = new CMenuCommand("Utwórz spersonalizowane obiekty CTable", "create", new CCommandCreateSpecificObjects(table_handler));
+    CMenuCommand* create_default_objects_mc = new CMenuCommand("Utwórz domyślne obiekty CTable", "create default", new CCommandCreateDefaultObjects(table_handler));
     CMenuCommand* delete_all_objects_mc = new CMenuCommand("Usuń wszystkie obiekty CTable", "delete", new CCommandDeleteAllObjects(table_handler));
     CMenuCommand* delete_specific_object_mc = new CMenuCommand("Usuń określony obiekt CTable", "delete specific", new CCommandDeleteSpecificObject(table_handler));
     CMenuCommand* set_table_cell_value_mc = new CMenuCommand("Ustaw wartość określonej komórki CTable", "set", new CCommandSetTableCellValue(table_handler));
@@ -18,11 +19,16 @@ void start() {
     CMenuCommand* show_object_info_mc = new CMenuCommand("Pokaż info o specyficznym obiekcie CTable", "show", new CCommandShowObjectInfo(table_handler));
     CMenuCommand* test_mc = new CMenuCommand("Test", "test", new CCommandTest(table_handler));
 
+
+    CMenu* ctable_create_menu = new CMenu("Utwórz obiekty" , "create menu");
+    ctable_create_menu->addCMenuItem(create_default_objects_mc);
+    ctable_create_menu->addCMenuItem(create_specific_objects_mc);
+    ctable_create_menu->addCMenuItem(clone_table_mc);
+
     CMenu* ctable_menu = new CMenu("CTable menu", "ctable");
+    ctable_menu->addCMenuItem(ctable_create_menu);
     ctable_menu->addCMenuItem(change_object_name_mc);
     ctable_menu->addCMenuItem(change_table_size_mc);
-    ctable_menu->addCMenuItem(clone_table_mc);
-    ctable_menu->addCMenuItem(create_object_mc);
     ctable_menu->addCMenuItem(delete_all_objects_mc);
     ctable_menu->addCMenuItem(delete_specific_object_mc);
     ctable_menu->addCMenuItem(set_table_cell_value_mc);

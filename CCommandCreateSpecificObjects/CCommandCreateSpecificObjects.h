@@ -7,10 +7,10 @@
 
 #include "../CCommand/CCommand.h"
 
-class CCommandCreateObjects : public CCommand{
+class CCommandCreateSpecificObjects : public CCommand{
     public:
-        CCommandCreateObjects(CTableHandler* table_handler);
-        ~CCommandCreateObjects();
+        CCommandCreateSpecificObjects(CTableHandler* table_handler);
+        ~CCommandCreateSpecificObjects();
 
         void runCommand();
 
