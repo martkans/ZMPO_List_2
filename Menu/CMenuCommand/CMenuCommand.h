@@ -17,6 +17,10 @@ class CMenuCommand : public CMenuItem{
         ~CMenuCommand();
         void run();
 
+        int getMaxLevel(int max);
+        void setLevel(int level);
+        void buildLevel(string** tree_menu);
+
     private:
         CCommand* command_object;
 

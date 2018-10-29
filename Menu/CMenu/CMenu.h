@@ -25,6 +25,10 @@ class CMenu : public CMenuItem{
         bool addCMenuItem(CMenuItem* item);
         bool deleteCMenuItem(string command_of_object_to_delete);
 
+        int getMaxLevel(int max);
+        void setLevel(int level);
+        void buildLevel(string** tree_menu);
+
     private:
         bool* error;
         vector <CMenuItem*> menu_items;

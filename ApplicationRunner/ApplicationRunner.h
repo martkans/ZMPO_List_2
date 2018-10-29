@@ -20,6 +20,7 @@
 #include "../CCommand/CCommandShowAllCTableObjects/CCommandShowAllCTableObjects.h"
 #include "../CCommand/CCommandShowObjectInfo/CCommandShowObjectInfo.h"
 #include "../CCommand/CCommandTest/CCommandTest.h"
+#include "../CCommand/CCommandShowTree/CCommandShowTree.h"
 
 
 void start();

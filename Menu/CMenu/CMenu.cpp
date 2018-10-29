@@ -7,6 +7,7 @@
 CMenu::CMenu(string name, string command) {
     this->name = name;
     this->command = command;
+    this->level = 0;
     error = new bool();
 }
 
@@ -63,6 +64,32 @@ void CMenu::run() {
         }
 
     }while (input != BACK_STRING);
+}
+
+int CMenu::getMaxLevel(int max) {
+    if(max < this->level){
+        max = this->level;
+    }
+
+    for (int i = 0; i < menu_items.size(); ++i) {
+        max = menu_items.at(i)->getMaxLevel(max);
+    }
+
+    return max;
+}
+
+void CMenu::setLevel(int level) {
+    this->level = level;
+    for (unsigned int i = 0; i < menu_items.size(); ++i) {
+        menu_items.at(i)->setLevel(level+1);
+    }
+}
+
+void CMenu::buildLevel(string **tree_menu) {
+    *(tree_menu[level]) += command + " ";
+    for (int i = 0; i < menu_items.size(); ++i) {
+        menu_items.at(i)->buildLevel(tree_menu);
+    }
 }
 
 void CMenu::showMenu() {

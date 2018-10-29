@@ -19,8 +19,13 @@ class CMenuItem {
     protected:
         string name;
         string command;
+        int level;
 
         virtual void run() = 0;
+
+        virtual int getMaxLevel(int max) = 0;
+        virtual void setLevel(int level) = 0;
+        virtual void buildLevel(string** tree_menu) = 0;
 };
 
 
