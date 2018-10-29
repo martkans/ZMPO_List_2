@@ -4,7 +4,6 @@
 
 #include "ApplicationRunner.h"
 
-
 void start() {
 
     CTableHandler* table_handler = new CTableHandler();
